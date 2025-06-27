@@ -105,7 +105,15 @@
   min-height: 6rem;
   font-size: 1.6rem;
   font-weight: 900;
+  border: 0.1rem solid transparent;
   text-decoration: none;
+  transition: background-color 0.3s linear, color 0.3s linear, border 0.3s linear;
+}
+
+.member__link:hover {
+  background-color: #fff;
+  color: #000;
+  border: 0.1rem solid #000;
 }
 
 @media screen and (min-width: 1023px) {
