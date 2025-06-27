@@ -11,13 +11,101 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "member_section_wgppWP": {
+      "type": "member-section",
+      "name": "Become a Member",
+      "settings": {}
+    },
+    "member_benefits_xxQDKf": {
+      "type": "member-benefits",
+      "name": "Member Benefits",
+      "settings": {}
+    },
+    "member_works_PkUEEc": {
+      "type": "member-works",
+      "name": "Member Works",
+      "settings": {}
+    },
+    "member_join_W3HVde": {
+      "type": "member-join",
+      "name": "Member Join",
+      "settings": {}
+    },
+    "collapsible_content_ztnUdC": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_wPhx8L": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I join?",
+            "icon": "none",
+            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zHxKFD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the Membership Fee a Recurring Charge?",
+            "icon": "none",
+            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eAHnr3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I get FREE shipping on my first order?",
+            "icon": "none",
+            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fUmaV7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I cancel my Membership?",
+            "icon": "none",
+            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_wPhx8L",
+        "collapsible_row_zHxKFD",
+        "collapsible_row_eAHnr3",
+        "collapsible_row_fUmaV7"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "member_section_wgppWP",
+    "member_benefits_xxQDKf",
+    "member_works_PkUEEc",
+    "member_join_W3HVde",
+    "collapsible_content_ztnUdC"
   ]
 }
