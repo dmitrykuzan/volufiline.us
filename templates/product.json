@@ -28,18 +28,18 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "text_8xEQQz": {
-          "type": "text",
-          "settings": {
-            "text": "By purchasing this offer, you acknowledge that you have read and agreed to our website Terms of Service and billing terms. This offer is only valid for people in our VIP Membership program. If you are a first time buyer, you will be charged 29.99 dollars each month. Cancel anytime. If you want to pay full price and not enroll in any membership, please click the Guest Add to Cart Button below or at the bottom of this page.",
-            "text_style": "uppercase"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
+          }
+        },
+        "text_8xEQQz": {
+          "type": "text",
+          "settings": {
+            "text": "By purchasing this offer, you acknowledge that you have read and agreed to our website Terms of Service and billing terms. This offer is only valid for people in our VIP Membership program. If you are a first time buyer, you will be charged 29.99 dollars each month. Cancel anytime. If you want to pay full price and not enroll in any membership, please click the Guest Add to Cart Button below or at the bottom of this page.",
+            "text_style": "uppercase"
           }
         },
         "buy_buttons": {
@@ -55,8 +55,8 @@
         "price",
         "description",
         "quantity_selector",
-        "text_8xEQQz",
         "variant_picker",
+        "text_8xEQQz",
         "buy_buttons"
       ],
       "settings": {
