@@ -1,0 +1,43 @@
+{{ 'member-works.css' | asset_url | stylesheet_tag }}
+
+<section class="member-works page-width">
+  <div class="member-works__wrapper">
+    <div class="member-works__text">
+      <h2>How it Works</h2>
+
+      <p>A membership that pays for itself since day one.</p>
+    </div>
+
+    <ul class="member-works__list">
+      <li class="member-works__item">
+        <span>01</span>
+        <h3>JOIN THE CREW</h3>
+        <p>Select VIP Add to Cart on any product (use the Guest Add to Cart option to pay full price)</p>
+      </li>
+
+      <li class="member-works__item">
+        <span>02</span>
+        <h3>ACCESS PERKS INSTANTLY</h3>
+        <p>Use the membership portal website to access all of our best selling products at rock bottom prices</p>
+      </li>
+
+      <li class="member-works__item">
+        <span>03</span>
+        <h3>START SAVING</h3>
+        <p>Enjoy amazing savings and priority treatment with every sale.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Member Works",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Member Works"
+    }
+  ]
+}
+{% endschema %}

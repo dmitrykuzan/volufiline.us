@@ -1,0 +1,31 @@
+{{ 'member-section.css' | asset_url | stylesheet_tag }}
+
+<section class="member page-width">
+  <div class="member__wrapper">
+    <img class="member__bg" src="{{ 'member-bg.jpg' | asset_url }}" width="1540" height="710">
+    <div class="member__text">
+      <h1>Why Become a Member?</h1>
+      <p>
+        A Volufiline membership gets you access to to wholesale prices for hundreds of premiumbeauty products handpicked
+        by Volufiline’s team for our VIP members.
+      </p>
+    </div>
+
+    <div class="member__buttons">
+      <a class="member__link" href="#">Join & Save</a>
+      <a class="member__link" href="#">Existing Member Click Here</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Become a Member",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Become a Member"
+    }
+  ]
+}
+{% endschema %}

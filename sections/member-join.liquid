@@ -1,0 +1,28 @@
+{{ 'member-join.css' | asset_url | stylesheet_tag }}
+
+<section class="member-join page-width">
+  <div class="member-works__wrapper">
+    <div class="member-works__text">
+      <h2>Join Today</h2>
+
+      <p>Only $29.95 per month</p>
+    </div>
+
+    <div class="member__buttons">
+      <a class="member__link" href="#">Join & Save</a>
+      <a class="member__link" href="#">Existing Member Click Here</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Member Join",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Member Join"
+    }
+  ]
+}
+{% endschema %}

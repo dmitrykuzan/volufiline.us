@@ -2698,9 +2698,13 @@ input[type='checkbox'] {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
     min-height: 4.3rem;
     color: #000;
     font-size: 1.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
     transition: background-color 0.3s linear, color 0.3s linear;
 
     &:hover {

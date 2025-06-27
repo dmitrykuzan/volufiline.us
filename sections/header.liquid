@@ -175,7 +175,7 @@
             }}
           </div>
           <span style="position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-          Volufiline Face Serum for Skin Volume
+            Volufiline Face Serum for Skin Volume
           </span>
         {%- else -%}
           <span class="h2">Volufiline Face Serum for Skin Volume</span>
@@ -310,12 +310,16 @@
     </div>
 
     {% comment %} print link product {% endcomment %}
-    {% assign product = all_products.volufiline %}
-    {% if product %}
-      <a class="header__link-cta" href="{{ product.url }}">Buy Now</a>
-    {% else %}
-      <p>Product not found</p>
-    {% endif %}
+    {% comment %}
+      {% assign product = all_products.volufiline %}
+      {% if product %}
+        <a class="header__link-cta" href="{{ product.url }}">Buy Now</a>
+      {% else %}
+        <p>Product not found</p>
+      {% endif %}
+    {% endcomment %}
+
+    <button type="button" class="header__link-cta modal-cancel-trigger">Cancel Membership</button>
     {% comment %} print link product {% endcomment %}
   </header>
 </{{ header_tag }}>

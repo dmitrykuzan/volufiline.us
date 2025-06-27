@@ -1,0 +1,11 @@
+.member-join {
+  margin-top: 5rem;
+
+  .member__buttons {
+    .member__link {
+      background-color: #fff;
+      color: #000;
+      border: 0.1rem solid #000;
+    }
+  }
+}

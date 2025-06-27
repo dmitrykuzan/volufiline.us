@@ -1,0 +1,144 @@
+{{ 'modal-cancel.css' | asset_url | stylesheet_tag }}
+
+<div id="subscribe-modal-wrapper" class="modal-cancel__wrapper">
+  <div class="modal-cancel__content" role="dialog" aria-modal="true">
+    <button class="modal-cancel__close" aria-label="Close Modal">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6001 2.33055C29.7269 2.20378 29.8275 2.05328 29.8961 1.88764C29.9647 1.72201 30 1.54448 30 1.3652C30 1.18592 29.9647 1.0084 29.8961 0.842762C29.8275 0.677128 29.7269 0.526629 29.6001 0.399858C29.4734 0.273087 29.3229 0.172528 29.1572 0.10392C28.9916 0.0353121 28.8141 0 28.6348 0C28.4555 0 28.278 0.0353121 28.1124 0.10392C27.9467 0.172528 27.7962 0.273087 27.6695 0.399858L15 13.072L2.33055 0.399858C2.20378 0.273087 2.05328 0.172528 1.88764 0.10392C1.72201 0.0353121 1.54448 1.33575e-09 1.3652 0C1.18592 -1.33575e-09 1.0084 0.0353121 0.842762 0.10392C0.677128 0.172528 0.526629 0.273087 0.399858 0.399858C0.273087 0.526629 0.172528 0.677128 0.10392 0.842762C0.0353121 1.0084 -1.33575e-09 1.18592 0 1.3652C1.33575e-09 1.54448 0.0353121 1.72201 0.10392 1.88764C0.172528 2.05328 0.273087 2.20378 0.399858 2.33055L13.072 15L0.399858 27.6695C0.143833 27.9255 0 28.2727 0 28.6348C0 28.9969 0.143833 29.3441 0.399858 29.6001C0.655883 29.8562 1.00313 30 1.3652 30C1.72728 30 2.07452 29.8562 2.33055 29.6001L15 16.928L27.6695 29.6001C27.9255 29.8562 28.2727 30 28.6348 30C28.9969 30 29.3441 29.8562 29.6001 29.6001C29.8562 29.3441 30 28.9969 30 28.6348C30 28.2727 29.8562 27.9255 29.6001 27.6695L16.928 15L29.6001 2.33055Z" fill="black"/>
+      </svg>
+    </button>
+    {%- form 'contact', id: 'SubscribeForm', class: 'subscribe-modal__form' -%}
+      <div class="">
+        <div class="modal-cancel__body">
+          <h3 class="modal-cancel__body-title">Subscribe for news</h3>
+          <ul class="modal-cancel__buttons modal-cancel__buttons-column">
+            <li>
+              <div class="modal-cancel__input-field">
+                <input placeholder="Name" type="text" name="contact[name]" id="input-name">
+              </div>
+            </li>
+
+            <li>
+              <div class="modal-cancel__input-field">
+                <input placeholder="E-mail" type="email" name="contact[email]" id="input-email">
+              </div>
+
+              <div class="field field--with-error">
+                {%- if form.errors contains 'email' -%}
+                  <small class="contact__field-error" id="ContactForm-email-error">
+                    <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                    <span class="form__message">
+                      <span class="svg-wrapper">
+                        {{- 'icon-error.svg' | inline_asset_content -}}
+                      </span>
+                      {{- form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email -}}
+                    </span>
+                  </small>
+                {%- endif -%}
+              </div>
+            </li>
+
+            <li>
+              <div class="modal-cancel__input-field">
+                <input
+                  placeholder="(000) _ _ _ - _ _ _ _"
+                  type="text"
+                  name="contact[phone-number]"
+                  inputmode="numeric"
+                  autocomplete="tel"
+                  id="phone-number"
+                  class="phone-number"
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="email-error"
+          class="modal-cancel__email-error"
+          style="display: none;"
+        ></div>
+
+        {%- if form.posted_successfully? -%}
+          <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+            {{- 'icon-success.svg' | inline_asset_content -}}
+            {{ 'templates.contact.form.post_success' | t }}
+          </h2>
+        {%- elsif form.errors -%}
+          <div class="form__message">
+            <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+              {{- 'icon-error.svg' | inline_asset_content -}}
+              {{ 'templates.contact.form.error_heading' | t }}
+            </h2>
+          </div>
+          <ul class="form-status-list caption-large" role="list">
+            <li>
+              <a href="#ContactForm-email" class="link">
+                {{ form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email }}
+              </a>
+            </li>
+          </ul>
+        {%- endif -%}
+
+        <div class="modal-cancel__navigation">
+          <button class="modal-cancel__btn-next btn btn-blue submit-btn" id="submit-btn" type="submit">Submit</button>
+        </div>
+      </div>
+    {%- endform -%}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    //quiz
+    const modalWrapper = document.getElementById('subscribe-modal-wrapper');
+    const modalContent = modalWrapper.querySelector('.modal-cancel__content');
+    const closeBtn = modalWrapper.querySelector('.modal-cancel__close');
+
+    document.querySelectorAll('.modal-cancel-trigger').forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        console.log('hello');
+
+        modalWrapper.classList.add('active');
+        document.body.classList.add('overflow-hidden');
+      });
+    });
+
+    modalWrapper.addEventListener('click', (e) => {
+      if (!modalContent.contains(e.target)) {
+        closeModal();
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      closeModal();
+    });
+
+    function closeModal() {
+      modalWrapper.classList.remove('active');
+
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    //tel number validation
+    document.querySelectorAll('.phone-number').forEach(function (phoneInput) {
+      phoneInput.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+
+        if (value.length > 10) value = value.slice(0, 10);
+        let formatted = '';
+
+        if (value.length > 0) formatted = '(' + value.substring(0, 3);
+        if (value.length >= 4) formatted += ') ' + value.substring(3, 6);
+        if (value.length >= 7) formatted += '-' + value.substring(6, 10);
+
+        e.target.value = formatted;
+      });
+    });
+  });
+</script>

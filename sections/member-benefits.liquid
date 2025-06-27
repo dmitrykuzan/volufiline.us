@@ -1,0 +1,63 @@
+{{ 'member-benefits.css' | asset_url | stylesheet_tag }}
+
+<section class="member-benefits page-width">
+  <div class="member-benefits__wrapper">
+    <div class="member-benefits__image">
+      <img class="member-benefits__bg" src="{{ 'member-benefits.jpg' | asset_url }}" width="1540" height="710">
+    </div>
+
+    <ul class="member-benefits__list">
+      <li class="member-benefits__item">
+        <span class="icon">
+          <img src="{{ 'member-benefits-1.png' | asset_url }}" width="90" height="90" alt="icon">
+        </span>
+        <div class="member-benefits__item-text">
+          <h3>Premium Products at the Lowest Prices</h3>
+          <p>Save more than 80% OFF on our best selling Items & More!</p>
+        </div>
+      </li>
+
+      <li class="member-benefits__item">
+        <span class="icon">
+          <img src="{{ 'member-benefits-2.png' | asset_url }}" width="90" height="90" alt="icon">
+        </span>
+        <div class="member-benefits__item-text">
+          <h3>VIP Customer Support</h3>
+          <p>Get priority access to our 24/7 Customer support team to help with any issues</p>
+        </div>
+      </li>
+
+      <li class="member-benefits__item">
+        <span class="icon">
+          <img src="{{ 'member-benefits-3.png' | asset_url }}" width="90" height="90" alt="icon">
+        </span>
+        <div class="member-benefits__item-text">
+          <h3>FREE Shipping on All Member Orders</h3>
+          <p>Enjoy FREE Shipping on all membership orders after the end of your introduction period</p>
+        </div>
+      </li>
+
+      <li class="member-benefits__item">
+        <span class="icon">
+          <img src="{{ 'member-benefits-4.png' | asset_url }}" width="90" height="90" alt="icon">
+        </span>
+        <div class="member-benefits__item-text">
+          <h3>Unlock Exclusive Access to New Product Releases</h3>
+          <p>Never miss out on a new product drop. Get the t designs as soon as they are available</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Member Benefits",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Member Benefits"
+    }
+  ]
+}
+{% endschema %}
