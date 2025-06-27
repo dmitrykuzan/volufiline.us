@@ -1,0 +1,34 @@
+{{ 'banner-cta.css' | asset_url | stylesheet_tag }}
+
+<section class="banner-cta page-width">
+  <div class="banner-cta__wrapper">
+    <div class="banner-cta__text">
+      <div class="banner-cta__mobile-text">
+        <h3>100% Volufiline</h3>
+        <p>Enhances volume and plumps skin</p>
+      </div>
+      <div class="banner-cta__benefits">
+        <span>Volumize.</span>
+        <span>Tighten.</span>
+        <span>Restore.</span>
+      </div>
+
+      {% assign product = all_products.volufiline %}
+      <a class="banner-cta__link" href="{{ product.url }}"> Shop now</a>
+    </div>
+
+    <img class="banner-cta__image" src="{{ 'volufiline-banner-image.jpg' | asset_url }}" width="790" height="790">
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner CTA",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Banner CTA"
+    }
+  ]
+}
+{% endschema %}

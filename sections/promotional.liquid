@@ -1,0 +1,35 @@
+{{ 'promotional.css' | asset_url | stylesheet_tag }}
+
+<section class="promotional page-width">
+  <div class="promotional__wrapper">
+    <div class="promotional__text">
+      <h2 class="promotional__text-title">
+        volume <span>where</span> <br>
+        <span>you </span> actually <br>
+        need it.
+      </h2>
+    </div>
+    <div class="promotional__image">
+      <p class="promotional__image-text left-text">Precision-plumping for delicate areas</p>
+      <div class="promotional__image-wrapper">
+        <img class="promotional__image-desktop" src="{{ 'volufiline-promo.png' | asset_url }}" width="280" height="822" loading="lazy">
+         <img class="promotional__image-mobile" src="{{ 'promotional-mobile-image.png' | asset_url }}" width="813" height="1372" loading="lazy">
+      </div>
+      <p class="promotional__image-text right-text">Skin looks fuller, feels firmer</p>
+    </div>
+  </div>
+  {% assign product = all_products.volufiline %}
+  <a class="banner-cta__link promotional__link" href="{{ product.url }}"> Shop now</a>
+</section>
+
+{% schema %}
+{
+  "name": "Promotional section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Promotional section"
+    }
+  ]
+}
+{% endschema %}

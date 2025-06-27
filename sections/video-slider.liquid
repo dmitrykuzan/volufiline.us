@@ -1,0 +1,113 @@
+{{ 'video-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="video-slider page-width" id="VideoSlider{{ section.id }}">
+  <div class="video-slider__titles">
+    <h2>Unveil your glow with Volufiline</h2>
+    <p class="video-slider__subtitle">
+      We’ve helped 50,000+ customers<br class="mobile-break">achieve their skin goals.
+    </p>
+    <!-- Removed star rating elements -->
+  </div>
+
+  <div class="video-slider__wrapper">
+    <div class="swiper video-slider__swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="video-slider__slide">
+              <video
+                id="custom-video"
+                class="video-slider__video"
+                playsinline
+                preload="auto"
+                poster="{{ block.settings.poster_url }}"
+              >
+                <source src="{{ block.settings.video_url  }}" type="video/mp4">
+              </video>
+              <button class="video-slider__slide-button" aria-label="Play video">
+                <img
+                  src="{{ 'play-button.png' | asset_url }}"
+                  width="80"
+                  height="80"
+                  alt="Play Volufiline Product Video"
+                >
+              </button>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiperBeforeAfter = new Swiper('.video-slider__swiper', {
+      spaceBetween: 2,
+      slidesPerView: 1.2,
+      centeredSlides: true,
+      initialSlide: 1,
+      breakpoints: {
+        575: { spaceBetween: 10, slidesPerView: 2 },
+        767: { spaceBetween: 10, slidesPerView: 3 },
+        992: { slidesPerView: 3, centeredSlides: true }
+      }
+    });
+
+    const wrappers = document.querySelectorAll(".video-slider__slide");
+    wrappers.forEach(function (wrapper) {
+      const video = wrapper.querySelector("video");
+      const button = wrapper.querySelector(".video-slider__slide-button");
+
+      button.addEventListener("click", function () {
+        if (video.paused || video.ended) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener("play", () => button.classList.add("playing"));
+      video.addEventListener("pause", () => button.classList.remove("playing"));
+      video.addEventListener("ended", () => button.classList.remove("playing"));
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Video Review Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "video_slide",
+      "name": "Video Slide",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "url",
+          "id": "poster_url",
+          "label": "Poster Image URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Review Slider",
+      "blocks": [
+        {
+          "type": "video_slide"
+        },
+        {
+          "type": "video_slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

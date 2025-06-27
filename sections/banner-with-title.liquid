@@ -1,0 +1,40 @@
+{{ 'banner-with-title.css' | asset_url | stylesheet_tag }}
+{% assign product = all_products.volufiline %}
+
+<section class="banner-with-title">
+  <div class="banner-with-title__title-top-wrapper">
+    <div class="banner-with-title__title-top-ticker">
+      <span class="banner-with-title__title-top banner-with-title__title-top-1">Volume you deserve</span>
+      <span class="banner-with-title__title-top banner-with-title__title-top-1">Volume you deserve</span>
+      <span class="banner-with-title__title-top banner-with-title__title-top-2">Volume you deserve</span>
+      <span class="banner-with-title__title-top banner-with-title__title-top-2">Volume you deserve</span>
+    </div>
+  </div>
+
+  <div class="page-width">
+    <div class="banner-with-title__wrapper simple-layout">
+      <div class="banner-with-title__content gray-bg">
+        <div class="banner-with-title__text">
+          <h2>Looking for real volume?</h2>
+          <p>
+            Our 100% pure Volufiline visibly plumps and restores fullness by stimulating fat cell volume—naturally
+            lifting areas like undereyes, cheeks, and smile lines.
+          </p>
+          <a class="banner-with-title__link" href="{{ product.url }}">Shop now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner with title section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Banner with title section"
+    }
+  ]
+}
+{% endschema %}
