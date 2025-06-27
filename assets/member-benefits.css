@@ -16,6 +16,11 @@
   .member-benefits__wrapper {
     flex-direction: row;
   }
+
+  .member-benefits {
+    margin-top: 15rem;
+  }
+
 }
 
 .member-benefits__image {

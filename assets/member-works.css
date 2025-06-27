@@ -1,5 +1,5 @@
 .member-works {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .member-works__wrapper {
@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 1023px) {
   .member-works {
-    margin-top: 8rem;
+    margin-top: 15rem;
   }
 
   .member-works__wrapper {
@@ -26,9 +26,6 @@
 
 @media screen and (min-width: 1280px) {
 
-  .member-works {
-    margin-top: 12rem;
-  }
 
   .member-works__wrapper {
     gap: 6rem;

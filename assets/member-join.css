@@ -1,5 +1,5 @@
 .member-join {
-  margin-top: 5rem;
+  margin-top: 10rem;
 
   .member__buttons {
     .member__link {
@@ -7,5 +7,12 @@
       color: #000;
       border: 0.1rem solid #000;
     }
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .member-join {
+    margin-top: 15rem;
   }
 }

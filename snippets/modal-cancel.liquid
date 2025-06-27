@@ -10,8 +10,15 @@
     {%- form 'contact', id: 'SubscribeForm', class: 'subscribe-modal__form' -%}
       <div class="">
         <div class="modal-cancel__body">
-          <h3 class="modal-cancel__body-title">Subscribe for news</h3>
-          <ul class="modal-cancel__buttons modal-cancel__buttons-column">
+          <div class="modal-cancel__text">
+            <h3 class="modal-cancel__body-title">Membership Cancellation</h3>
+            <p class="modal-cancel__body-subtitle">
+              VIP Club membership ? Fill out the simple form below and write "Cancel my membership" in the Message area
+              and a member of our team will cancel your membership before your next billing.
+            </p>
+          </div>
+
+          <ul class="modal-cancel__buttons">
             <li>
               <div class="modal-cancel__input-field">
                 <input placeholder="Name" type="text" name="contact[name]" id="input-name">
@@ -50,6 +57,17 @@
                   id="phone-number"
                   class="phone-number"
                 >
+              </div>
+            </li>
+
+            <li>
+              <div class="modal-cancel__input-field">
+                <textarea
+                  placeholder="Type message"
+                  name="contact[textarea]"
+                  id="textarea"
+                  class="textarea"
+                ></textarea>
               </div>
             </li>
           </ul>
