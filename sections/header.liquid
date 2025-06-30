@@ -321,7 +321,19 @@
 
     {% comment %} <button type="button" class="header__link-cta modal-cancel-trigger">Cancel Membership</button> {% endcomment %}
    <button type="button" class="header__link-cta" id="cancel-membership-button">Cancel Membership</button>
-   
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const cancelBtn = document.querySelector('.modal-cancel-trigger');
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent modal behavior
+        e.stopPropagation(); // Stop any event bubbling
+        window.location.href = 'https://cancel.volufiline.us/';
+      });
+    }
+  });
+</script>
+
     {% comment %} print link product {% endcomment %}
 
    
