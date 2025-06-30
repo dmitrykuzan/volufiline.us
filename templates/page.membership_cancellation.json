@@ -22,8 +22,8 @@
         "button_w8T4qM": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Cancel Membership",
+            "button_link": "#",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
