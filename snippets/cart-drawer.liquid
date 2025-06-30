@@ -117,8 +117,13 @@
                   </thead>
 
                   <tbody role="rowgroup">
-                    {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
+                    
+                     {%- for item in cart.items -%}
+                      {%  assign name = '' %}
+ {%- for option in item.options_with_values -%}
+{%  assign name =  option.value %}
+{%- endfor -%}    
+                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row" var_id="{{ item.variant.id }}" option_name="{{ name }}">
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
