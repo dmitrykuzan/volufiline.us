@@ -13,6 +13,7 @@
     "logo_width": 190,
     "favicon": "shopify://shop_images/android-chrome-192x192.png",
     "select_product": "vip-membership",
+    "disclosure_text": "<p>By purchasing this offer, you acknowledge that you have read and agreed to our website Terms of Service and billing terms. This offer is only valid for people in our VIP Membership program. If you are a first time buyer, you will be charged 29.99 dollars each month. Cancel anytime. If you want to pay full price and not enroll in any membership, please click the Guest Add to Cart Button below or at the bottom of this page.</p>",
     "type_header_font": "poppins_n4",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
