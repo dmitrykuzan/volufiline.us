@@ -79,7 +79,11 @@
 
               <tbody>
                 {%- for item in cart.items -%}
-                  <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                  {%  assign name = '' %}
+ {%- for option in item.options_with_values -%}
+{%  assign name =  option.value %}
+{%- endfor -%}
+                  <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}"  var_id="{{ item.variant.id }}" option_name="{{ name }}">
                     <td class="cart-item__media">
                       {% if item.image %}
                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
