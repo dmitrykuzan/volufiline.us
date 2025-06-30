@@ -321,18 +321,21 @@
 
     {% comment %} <button type="button" class="header__link-cta modal-cancel-trigger">Cancel Membership</button> {% endcomment %}
    <button type="button" class="header__link-cta" id="cancel-membership-button">Cancel Membership</button>
-   <script>
+  <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const cancelBtn = document.querySelector('.modal-cancel-trigger');
+    const cancelBtn = document.getElementById('cancel-membership-button');
     if (cancelBtn) {
       cancelBtn.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent modal behavior
-        e.stopPropagation(); // Stop any event bubbling
-        window.location.href = 'https://cancel.volufiline.us/';
+        e.preventDefault();
+        e.stopImmediatePropagation(); // 🛑 block all modal triggers
+        setTimeout(() => {
+          window.location.href = 'https://cancel.volufiline.us/';
+        }, 10); // short delay for safety
       });
     }
   });
 </script>
+
 
     {% comment %} print link product {% endcomment %}
 
