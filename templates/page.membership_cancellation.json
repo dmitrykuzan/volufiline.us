@@ -13,11 +13,40 @@
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_7eApTH": {
+      "type": "rich-text",
+      "blocks": {
+        "button_w8T4qM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_w8T4qM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_7eApTH"
   ]
 }
