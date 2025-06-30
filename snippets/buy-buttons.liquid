@@ -105,7 +105,7 @@
 {% endfor %}
 
 
-<div class=" atc-button product-form__submit button button--full-width vip_add_to_cart" data_var_id ="{{ select_product.first_available_variant.id }}" selling_plan ="{{ selling_plan }}" style="border-radius: 0px; margin:20px 0px 10px 0px;font-weight: 700; font-size: 18px; text-transform: uppercase;background-color:{{ settings.btn_color }}!important;">
+<div class="  button--full-width vip_add_to_cart" data_var_id ="{{ select_product.first_available_variant.id }}" selling_plan ="{{ selling_plan }}" style="border-radius: 0px; margin:20px 0px 10px 0px;font-weight: 700; font-size: 18px; text-transform: uppercase;background-color:{{ settings.btn_color }}!important;">
           <span class="text_aatc" style="color:{{ settings.text_color }}!important;">
  {{ settings.vip_text }} <span class="vip"></span>
             </span>
@@ -127,7 +127,7 @@ margin:0px;
 
 {%  if settings.guest_text != blank %}
 
-<div class="atc-button product-form__submit button button--full-width guest_add_to_cart " style="border-radius: 0px;  margin:10px 0px 20px 0px; font-weight: 700; font-size: 18px; text-transform: uppercase; background-color:{{ settings.btn_color1 }}!important;">
+<div class="  button--full-width guest_add_to_cart " style="border-radius: 0px;  margin:10px 0px 20px 0px; font-weight: 700; font-size: 18px; text-transform: uppercase; background-color:{{ settings.btn_color1 }}!important;">
             <span style="color:{{ settings.text_color }}!important;">
       {{ settings.guest_text }} <span class="guest"></span>
             </span>
