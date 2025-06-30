@@ -35,17 +35,10 @@
             "swatch_shape": "circle"
           }
         },
-        "text_8xEQQz": {
-          "type": "text",
-          "settings": {
-            "text": "By purchasing this offer, you acknowledge that you have read and agreed to our website Terms of Service and billing terms. This offer is only valid for people in our VIP Membership program. If you are a first time buyer, you will be charged 29.99 dollars each month. Cancel anytime. If you want to pay full price and not enroll in any membership, please click the Guest Add to Cart Button below or at the bottom of this page.",
-            "text_style": "uppercase"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         }
@@ -56,7 +49,6 @@
         "description",
         "quantity_selector",
         "variant_picker",
-        "text_8xEQQz",
         "buy_buttons"
       ],
       "settings": {
