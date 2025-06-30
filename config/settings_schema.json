@@ -33,6 +33,60 @@
       }
     ]
   },
+    {
+    "name": "Vip Button",
+    "settings": [
+
+     {
+        "type": "product",
+        "id": "select_product",
+        "label": "Select Product"
+      },
+    {
+        "type": "color",
+        "id": "btn_color",
+        "label": "VIP Buttons Color"
+      },
+     {
+        "type": "color",
+        "id": "btn_color1",
+        "label": "Guest Buttons Color"
+      },
+    {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      },
+
+    {
+        "type": "text",
+        "id": "vip_text",
+        "label": "Enter VIP Text",
+        "default": "VIP ADD TO CART"
+      },
+      {
+        "type": "text",
+        "id": "guest_text",
+        "label": "Enter Guest Text",
+         "default": "GUEST ADD TO CART"
+      },
+      {
+        "type": "richtext",
+        "id": "disclosure_text",
+        "label": "Enter Disclosure Text"
+      },
+ {
+      "type": "range",
+      "id": "font_size_text",
+      "label": "Disclosure Font Size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    }
+    ]
+  },
   {
     "name": "t:settings_schema.colors.name",
     "settings": [
