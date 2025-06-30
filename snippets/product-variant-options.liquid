@@ -91,7 +91,7 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}" new_dtat="{{ value }}">
+    <label for="{{ input_id }}" new_dtat="{% if value contains 'VIP' %}VIP Price{% elsif value contains 'Guest' %}Guest Price{% endif %}">
       {{ value -}}
       {{ label_unavailable }}
     </label>
