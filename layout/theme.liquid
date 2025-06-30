@@ -558,4 +558,156 @@
 
     {% render 'modal-cancel' %}
   </body>
+
+  <script>
+
+$(document).on('click', '.guest_add_to_cart', function(){
+$('label[new_dtat=" Guest Price"]').click();
+   setTimeout(function () { 
+ $('.vip_guest_add_to_cart').click(); 
+   },1500);
+});
+
+      
+$(document).on('click', '.vip_add_to_cart', function(){
+$('label[new_dtat=" VIP Price"]').click();
+    setTimeout(function() {
+    const variantId = 45033327165623;
+    const sellingPlan = 1589674167; 
+
+    $.ajax({
+        type: 'GET',
+        url: '/cart.js',
+        dataType: 'json',
+        success: function (cart) {
+            let isInCart = false;
+
+            cart.items.forEach(function (item) {
+                if (item.variant_id === variantId) {
+                    isInCart = true;
+                }
+            });
+
+            if (isInCart) {
+                // Update the quantity to 1
+                $.ajax({
+                    type: 'POST',
+                    url: '/cart/update.js',
+                    data: {
+                        updates: {
+                            [variantId]: 1
+                        }
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        setTimeout(function() {
+                            $('.vip_guest_add_to_cart').click(); 
+                        }, 500);
+                    },
+                    error: function (error) {
+                        console.error('Error updating cart:', error);
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: '/cart/add.js',
+                    data: {
+                        id: variantId,
+                        quantity: 1,
+                        selling_plan: sellingPlan
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        setTimeout(function() {
+                          $('.vip_guest_add_to_cart').click(); 
+                        }, 500);
+                    },
+                    error: function (error) {
+                        console.error('Error adding product to cart:', error);
+                    }
+                });
+            }
+        },
+        error: function (error) {
+            console.error('Error fetching cart:', error);
+        }
+    });
+}, 1500);
+});
+
+
+
+
+ $(document).on("click", ".cart-drawer .cart-item cart-remove-button", function() {
+    
+   // alert('hiiiii');
+setTimeout(function(){
+    
+$.getJSON('/cart.js', function(cart) {
+    let hasVIPPrice = false;
+    let hasVariant = false;
+    
+    $('.cart-item').each(function() {
+        let optionName = $(this).attr('option_name');
+        if (optionName.includes('VIP Price')) {
+            hasVIPPrice = true;
+        }
+    });
+
+    cart.items.forEach(item => {
+        if (item.variant_id == 45033327165623) {
+            hasVariant = true;
+        }
+    });
+
+    if (hasVIPPrice && hasVariant) {
+
+    } else if(!hasVIPPrice && hasVariant) {
+
+       $('.cart-drawer .cart-item[var_id="45033327165623"] cart-remove-button button').click();
+    }
+});
+    
+},1000);
+
+});
+
+$(document).on("click", "form#cart .cart__items cart-remove-button", function() {
+  
+  
+setTimeout(function(){
+$.getJSON('/cart.js', function(cart) {
+    let hasVIPPrice = false;
+    let hasVariant = false;
+    
+    $('form#cart .cart-item').each(function() {
+        let optionName = $(this).attr('option_name');
+        if (optionName.includes('VIP Price')) {
+            hasVIPPrice = true;
+        }
+    });
+
+    cart.items.forEach(item => {
+        if (item.variant_id == 45033327165623) {
+            hasVariant = true;
+        }
+    });
+    if (hasVIPPrice && hasVariant) {
+    } else if(!hasVIPPrice && hasVariant) {
+  
+  $('form#cart .cart-item[var_id="45033327165623"] cart-remove-button').click();
+   
+    }
+});
+
+},1000);
+
+
+
+    
+});
+  
+  
+</script>
 </html>
