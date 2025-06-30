@@ -93,6 +93,49 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+
+
+
+{%  assign selling_plan = '' %}
+{%  assign select_product = settings.select_product %}
+ {% for selling_plan_group in select_product.selling_plan_groups %}
+{% for plan in selling_plan_group.selling_plans %}
+{%  assign selling_plan = plan.id %}
+{% endfor %}
+{% endfor %}
+
+
+<div class=" atc-button product-form__submit button button--full-width vip_add_to_cart" data_var_id ="{{ select_product.first_available_variant.id }}" selling_plan ="{{ selling_plan }}" style="border-radius: 0px; margin:20px 0px 10px 0px;font-weight: 700; font-size: 18px; text-transform: uppercase;background-color:{{ settings.btn_color }}!important;">
+          <span class="text_aatc" style="color:{{ settings.text_color }}!important;">
+ {{ settings.vip_text }} <span class="vip"></span>
+            </span>
+
+<span class="loader dat_all" style="display:none;"></span>
+  
+        </div>
+
+<div class="new_dtta">
+{{ settings.disclosure_text }} 
+<style>
+.new_dtta p{
+font-size:{{settings.font_size_text}}px;
+margin:0px;
+}
+</style>
+</div>
+
+
+{%  if settings.guest_text != blank %}
+<div class="dataa_wrapper">
+<div class="atc-button product-form__submit button button--full-width guest_add_to_cart " style="border-radius: 0px;  margin:10px 0px 20px 0px; font-weight: 700; font-size: 18px; text-transform: uppercase; background-color:{{ settings.btn_color1 }}!important;">
+            <span style="color:{{ settings.text_color }}!important;">
+      {{ settings.guest_text }} <span class="guest"></span>
+            </span>
+          </div> 
+</div>
+{% endif %}
+
+          
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
