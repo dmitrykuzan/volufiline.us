@@ -461,7 +461,7 @@
       </cart-drawer-items>
 
 
-
+{% comment %}
       {%- if cart != empty -%}
 
         
@@ -635,6 +635,8 @@
         <!--  -->
 
 {% endif %}
+
+      {% endcomment %}
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
