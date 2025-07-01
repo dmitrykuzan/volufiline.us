@@ -569,10 +569,12 @@ $(document).on('click', '.guest_add_to_cart', function() {
 
   setTimeout(function() {
     $this.siblings('.vip_guest_add_to_cart').click();
-  }, 2000);
   setTimeout(function() {
 $('.guest_add_to_cart').css('opacity','1');
-  },4000);
+  },2000);
+    
+  }, 2000);
+
 });
     
       
@@ -636,6 +638,10 @@ $('.vip_add_to_cart').css('opacity','1');
                     success: function (response) {
                         setTimeout(function() {
                           $('.vip_guest_add_to_cart').click(); 
+
+                            setTimeout(function() {
+$('.vip_add_to_cart').css('opacity','1');
+  },1000);
                         }, 500);
                     },
                     error: function (error) {
