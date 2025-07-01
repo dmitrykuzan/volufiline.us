@@ -563,8 +563,10 @@
   <script>
 
 $(document).on('click', '.guest_add_to_cart', function(){
+  alert('hiiiii');
 $('label[new_dtat="Guest Price"]').click();
    setTimeout(function () { 
+     alert('hiiiii');
      $(this).closest('form[action="/cart/add"]').find('.vip_guest_add_to_cart').click(); 
    },2000);
 });
