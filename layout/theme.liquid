@@ -601,7 +601,7 @@ $('label[new_dtat="VIP Price"]').click();
                     dataType: 'json',
                     success: function (response) {
                           setTimeout(function () { 
-     $(this).closest('.product-form__buttons').find('.vip_guest_add_to_cart').click(); 
+     $(this).closest('form[action="/cart/add"]').find('.vip_guest_add_to_cart').click(); 
    },500);
                     },
                     error: function (error) {
