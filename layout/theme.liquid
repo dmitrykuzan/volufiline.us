@@ -564,7 +564,7 @@
 
 $(document).on('click', '.guest_add_to_cart', function() {
   $('label[new_dtat="Guest Price"]').click();
-
+  $('.vip_add_to_cart').css('opacity','0.7');
   var $this = $(this); // Store reference to current element
 
   setTimeout(function() {
