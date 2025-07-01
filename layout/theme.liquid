@@ -611,10 +611,12 @@ $('label[new_dtat="VIP Price"]').click();
                     success: function (response) {
                           setTimeout(function () { 
  $this.siblings('.vip_guest_add_to_cart').click();
-   },500);
   setTimeout(function() {
 $('.vip_add_to_cart').css('opacity','1');
-  },2000);
+  },1000);
+                            
+   },500);
+
                       
                     },
                     error: function (error) {
