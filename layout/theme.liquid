@@ -563,19 +563,18 @@
   <script>
 
 $(document).on('click', '.guest_add_to_cart', function() {
-  alert('hiiiii');
   $('label[new_dtat="Guest Price"]').click();
 
   var $this = $(this); // Store reference to current element
 
   setTimeout(function() {
-    alert('hiiiii');
     $this.siblings('.vip_guest_add_to_cart').click();
   }, 2000);
 });
     
       
 $(document).on('click', '.vip_add_to_cart', function(){
+   var $this = $(this); 
 $('label[new_dtat="VIP Price"]').click();
     setTimeout(function() {
     const variantId = 45033327165623;
