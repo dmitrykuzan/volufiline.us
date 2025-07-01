@@ -573,7 +573,7 @@ $(document).on('click', '.guest_add_to_cart', function() {
 $('.guest_add_to_cart').css('opacity','1');
   },1000);
     
-  }, 2000);
+  }, 1000);
 
 });
     
@@ -615,7 +615,7 @@ $('label[new_dtat="VIP Price"]').click();
  $this.siblings('.vip_guest_add_to_cart').click();
   setTimeout(function() {
 $('.vip_add_to_cart').css('opacity','1');
-  },1000);
+  },800);
                             
    },500);
 
@@ -641,7 +641,7 @@ $('.vip_add_to_cart').css('opacity','1');
 
                             setTimeout(function() {
 $('.vip_add_to_cart').css('opacity','1');
-  },1000);
+  },800);
                         }, 500);
                     },
                     error: function (error) {
@@ -654,7 +654,7 @@ $('.vip_add_to_cart').css('opacity','1');
             console.error('Error fetching cart:', error);
         }
     });
-}, 1500);
+}, 1000);
 });
 
 
