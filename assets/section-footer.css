@@ -12,6 +12,7 @@
 }
 
 .footer__custom-info {
+  margin-top: 2rem;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
@@ -23,6 +24,10 @@
 @media screen and (min-width: 749px) {
   .footer__wrapper {
     gap: 2rem;
+  }
+
+  .footer__custom-info {
+    margin-top: initial;
   }
 }
 
@@ -60,7 +65,7 @@
 
   .footer-block.grid__item {
     padding: 0;
-    margin: 4rem 0;
+    margin: 2rem 0;
     width: 100%;
   }
 
@@ -209,6 +214,8 @@
 .footer-block__heading {
   margin-bottom: 1rem;
   margin-top: 0;
+  color: #000;
+  font-weight: 600;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
@@ -413,6 +420,10 @@
   .footer-block__details-content .list-menu__item--active:hover {
     text-decoration-thickness: 0.2rem;
   }
+}
+
+.footer-block__details-content .list-menu__item--link {
+   line-height: 133%;
 }
 
 @media screen and (max-width: 989px) {
