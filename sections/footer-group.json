@@ -14,13 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text_xV4iYQ": {
-          "type": "text",
-          "settings": {
-            "heading": "Contact us",
-            "subtext": "<p><strong>Pink Talent Management LLC</strong> <br/>30 N Gould St Ste R Sheridan, WY 82801<br/>+1 (720) 204-8577</p>"
-          }
-        },
         "link_list_xeg9zH": {
           "type": "link_list",
           "settings": {
@@ -34,12 +27,19 @@
             "heading": "Policies",
             "menu": "footer-menu-policy"
           }
+        },
+        "text_xV4iYQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact us",
+            "subtext": "<p><strong>Pink Talent Management LLC</strong> <br/>30 N Gould St Ste R Sheridan, WY 82801<br/>+1 (720) 204-8577</p>"
+          }
         }
       },
       "block_order": [
-        "text_xV4iYQ",
         "link_list_xeg9zH",
-        "link_list_7Bd4fM"
+        "link_list_7Bd4fM",
+        "text_xV4iYQ"
       ],
       "settings": {
         "color_scheme": "scheme-1",
