@@ -54,7 +54,7 @@
           "settings": {
             "heading": "Is the Membership Fee a Recurring Charge?",
             "icon": "none",
-            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "row_content": "<p>Yes, you will be charged $29.95 per month until you cancel. The amount may be less but never more.</p>",
             "page": ""
           }
         },
@@ -63,7 +63,7 @@
           "settings": {
             "heading": "Do I get FREE shipping on my first order?",
             "icon": "none",
-            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "row_content": "<p>No, your first order is an exclusive New VIP Member deal which does not include FREE shipping. All future orders will have FREE shipping applied.</p>",
             "page": ""
           }
         },
@@ -72,7 +72,7 @@
           "settings": {
             "heading": "How do I cancel my Membership?",
             "icon": "none",
-            "row_content": "<p>Use the VIP Add to Cart button on any product page and go through the checkout process like any other purchase. After checkout, your order confirmation emails will explain how to access member benefits.</p>",
+            "row_content": "<p><strong>How do I cancel my Membership?</strong></p><p>You can cancel your membership anytime you like. These are a few of the many ways you can cancel:</p><p>(1) Simply email us at info@volufiline.us<br/><br/>(2) Access https://cancel.volufiline.us</p><p>(4) Reply to your order confirmation email</p><p>or (5) fill out the contact form below.<br/><br/>All cancellations will be honored when done at least 3 business days before the next billing.</p>",
             "page": ""
           }
         }
