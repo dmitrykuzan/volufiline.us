@@ -41,6 +41,15 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
+        },
+        "collapsible_tab_4Q9Jyg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key ingridients",
+            "icon": "none",
+            "content": "<p>This formula contains Anemarrhena Asphodeloides Root Extract, Centella Asiatica Extract, Tocopherol, Panthenol, Phenoxyethanol, Caprylic Acid, and Hydrogenated Polyisobutene & Water. These ingredients work together to hydrate, soothe, and condition the skin while supporting barrier repair, delivering antioxidant protection, and promoting a visibly plumper, fuller appearance.<br/><br/>FDA Disclosure: This product is not intended to diagnose, treat, cure, or prevent any disease. Statements have not been evaluated by the Food and Drug Administration.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -49,7 +58,8 @@
         "description",
         "quantity_selector",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "collapsible_tab_4Q9Jyg"
       ],
       "settings": {
         "enable_sticky_info": true,
