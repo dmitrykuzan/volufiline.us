@@ -54,7 +54,7 @@
           "settings": {
             "heading": "Is the Membership Fee a Recurring Charge?",
             "icon": "none",
-            "row_content": "<p>Yes, you will be charged $29.95 per month until you cancel. The amount may be less but never more.</p>",
+            "row_content": "<p>Yes, you will be charged $29.99 per month until you cancel. The amount may be less but never more.</p>",
             "page": ""
           }
         },
